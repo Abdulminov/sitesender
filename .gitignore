@@ -1,0 +1,23 @@
+cookies.txt  
+www.youtube.com_cookies.txt
+
+# Секреты
+.env
+
+# Виртуальное окружение
+.venv/
+env/
+venv/
+ENV/
+
+# Настройки IDE
+.idea/
+.vscode/
+*.swp
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+
+# Результаты сборки образов (если сохраняли архивы)
+*.tar
