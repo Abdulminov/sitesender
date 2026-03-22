@@ -1,0 +1,8 @@
+.vagrant/
+__pycache_/
+*.pyc
+*.box
+*.tar
+ansible/.vault_pass
+.idea/
+*secrets.yml
