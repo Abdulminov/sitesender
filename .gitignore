@@ -6,3 +6,4 @@ __pycache_/
 ansible/.vault_pass
 .idea/
 *secrets.yml
+artifacs/

@@ -22,7 +22,9 @@ Vagrant.configure("2") do |config|
   
   # 2. Настройка МАСТЕР-НОДЫ
   config.vm.define "node-master" do |master|
-    master.vm.network "private_network", ip: "192.168.56.10"
+    master.vm.network "public_network", ip: "192.168.88.40", gateway: "192.168.88.1" #"private_network", ip: "192.168.56.10"
+    #master.vm.network "forwarded_port", guest: 5432, host: 5432
+    #master.vm.network "forwarded_port", guest: 80, host: 8000, host_ip:"0.0.0.0"
     master.vm.provider "virtualbox" do |vb|
       vb.memory = "2048" # 1 Гб оперативы хватит для K3s мастера
       vb.cpus = 1
@@ -36,8 +38,8 @@ Vagrant.configure("2") do |config|
   # 3. Настройка ВОРКЕР-НОДЫ (имитация твоей приставки)
   config.vm.define "node-worker" do |worker|
     worker.vm.hostname = "node-worker"
-    worker.vm.network "private_network", ip: "192.168.56.11"
-    worker.vm.network "forwarded_port", guest: 8000, host: 8000 
+    worker.vm.network "public_network", ip: "192.168.88.41" #"private_network", ip: "192.168.56.11"
+    #worker.vm.network "forwarded_port", guest: 5000, host: 5001 
     worker.vm.provider "virtualbox" do |vb|
       vb.memory = "6000"
       vb.cpus = 1
