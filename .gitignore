@@ -1,23 +1,12 @@
-cookies.txt  
-www.youtube.com_cookies.txt
-temp_downloads/
-# Секреты
-.env
-
-# Виртуальное окружение
-.venv/
-env/
-venv/
-ENV/
-
-# Настройки IDE
-.idea/
-.vscode/
-*.swp
-
-# Кэш Python
-__pycache__/
-*.py[cod]
-
-# Результаты сборки образов (если сохраняли архивы)
+.vagrant/
+__pycache_/
+*.pyc
+*.box
 *.tar
+ansible/.vault_pass
+.idea/
+*secrets.yml
+artifacs/
+*.log
+Vagrantfile
+
