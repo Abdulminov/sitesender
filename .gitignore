@@ -7,3 +7,5 @@ ansible/.vault_pass
 .idea/
 *secrets.yml
 artifacs/
+*.log
+Vagrantfile

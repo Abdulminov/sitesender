@@ -38,7 +38,7 @@ Vagrant.configure("2") do |config|
   # 3. Настройка ВОРКЕР-НОДЫ (имитация твоей приставки)
   config.vm.define "node-worker" do |worker|
     worker.vm.hostname = "node-worker"
-    worker.vm.network "public_network", ip: "192.168.88.41" #"private_network", ip: "192.168.56.11"
+    worker.vm.network "public_network", ip: "192.168.88.41", gateway: "192.168.88.1" #"private_network", ip: "192.168.56.11"
     #worker.vm.network "forwarded_port", guest: 5000, host: 5001 
     worker.vm.provider "virtualbox" do |vb|
       vb.memory = "6000"
