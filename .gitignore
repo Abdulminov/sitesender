@@ -9,4 +9,4 @@ ansible/.vault_pass
 artifacs/
 *.log
 Vagrantfile
-
+*.tar.gz
