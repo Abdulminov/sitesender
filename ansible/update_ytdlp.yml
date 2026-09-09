@@ -2,11 +2,11 @@
 - name: Hotfix update for yt-dlp inside container
   hosts: workers
   become: true
-  become_user: "{{ app_user }}"
+  become_user: "appuser"
   tasks:
     - name: Upgrade yt-dlp inside container
       containers.podman.podman_container_exec:
-        name: app_bot_1
+        name: worker_app_bot
         # name: "{{ project_name }}_{{ bot_service_name }}_1"
         user: root
         argv:
